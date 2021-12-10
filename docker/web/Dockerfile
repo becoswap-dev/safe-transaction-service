@@ -11,6 +11,7 @@ RUN set -ex \
 		libssl-dev \
 		" \
     && apt-get update \
+    && apt-get install git -y \
     && apt-get install -y --no-install-recommends $buildDeps tmux postgresql-client \
     && pip install -U --no-cache-dir wheel setuptools pip \
     && pip install --no-cache-dir -r requirements.txt \
